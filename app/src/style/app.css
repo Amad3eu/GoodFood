@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;1,200&display=swap');
+body {
+    background-color: #FFFDED;
+}
+
+.wrap-mobile {
+    margin: auto;
+    width: 300px;
+    height: 534px;
+    overflow: hidden;
+    position: relative;
+    background: #FFFDED;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+
+.area {
+    background: #FBEF85;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.info h3 {
+    position: absolute;
+    width: 164px;
+    height: 28px;
+    align-items: center;
+    top: 140px;
+    font-family: 'Work Sans' sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.username {
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.username-email {
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.container {
+    display: table;
+    text-align: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    width: 60%;
+}
+
+.fa {
+    display: inline-block;
+}
+
+.image {
+    border: 2px solid rgba(0, 0, 0, 0.788);
+    display: flex;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+
+/* .aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #339af0;
+    z-index: 5;
+    overflow: auto;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all ease 500ms;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 95px;
+}
+
+li {
+    cursor: pointer;
+    padding: 20px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    position: relative;
+}
+
+i {
+    font-size: 30px;
+    margin-right: 25px;
+} */
+
+.guia {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+}
+.logout{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+}
