@@ -1,0 +1,140 @@
+html {
+  box-sizing: border-box;
+  --bgColorMenu: #1d1d27;
+  --duration: .7s;
+}
+
+html *,
+html *::before,
+html *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1eed1;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color var(--duration);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 5px rgba(48, 29, 32, 0.2);
+  z-index: 5;
+}
+.footer ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.footer ul li {
+  width: 100%;
+}
+.footer ul li button {
+  width: 100%;
+  background: transparent;
+  padding: 20px 0;
+  border: none;
+  font-size: 0px;
+  outline: none;
+  position: relative;
+}
+.footer ul li button.active i {
+  color: #575757;
+  font-weight: bold;
+}
+.footer ul li button.notification i {
+  color: #338af0;
+  font-weight: bold;
+}
+.footer ul li button.notification:before {
+  content: attr(data-notification);
+  font-size: 10px;
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  display: block;
+  color: #338af0;
+  font-weight: bold;
+  width: 15px;
+  text-align: left;
+}
+.footer ul li button i {
+  color: #d2d2d2;
+  font-size: 20px;
+}
+
+body.open .mobile-wrapper .mobile .screen .header .navbar .nav-toggle span:nth-child(1) {
+  transform: translateY(-50%) rotate(-45deg);
+  transform-origin: bottom left;
+  width: 50%;
+  top: 50%;
+}
+body.open .mobile-wrapper .mobile .screen .header .navbar .nav-toggle span:nth-child(3) {
+  transform: translateY(50%) rotate(45deg);
+  transform-origin: top left;
+  width: 50%;
+  bottom: 50%;
+}
+body.open .mobile-wrapper .mobile .screen .aside {
+  transform: translateX(0%);
+}
+body.open .mobile-wrapper .mobile .screen .aside ul li {
+  animation: fadeInLeft ease 500ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+body.open .mobile-wrapper .mobile .screen .aside ul li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+body.open .mobile-wrapper .mobile .screen .aside ul li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+body.open .mobile-wrapper .mobile .screen .aside ul li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+body.open .mobile-wrapper .mobile .screen .aside ul li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+button {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
