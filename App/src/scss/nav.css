@@ -1,6 +1,6 @@
 html {
   background: #f3f3f3;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   min-height: 100%;
 }
 
@@ -190,7 +190,7 @@ button {
 .mobile-wrapper .mobile .screen .header .navbar .nav-toggle span {
   display: block;
   height: 3px;
-  background: white;
+  background: #070606;
   position: absolute;
   border-radius: 5px;
   -webkit-transition: all ease 250ms;
@@ -223,7 +223,7 @@ button {
   letter-spacing: 2px;
   font-family: 'Work Sans';
   font-style: italic;
-  font-weight: 400;
+  font-weight: 1000;
   font-size: 14px;
   line-height: 26px;
 }
@@ -293,21 +293,77 @@ button {
   width: 100%;
 }
 
-.mobile-wrapper .mobile .screen .content .coffee {
+.mobile-wrapper .mobile .screen .content .expressCoffee {
   width: 100%;
   height: 160px;
   display: block;
   border-radius: 10px;
 }
 
-.mobile-wrapper .mobile .screen .content .coffee2 {
+.mobile-wrapper .mobile .screen .content .cappuccino {
   width: 100%;
   height: 150px;
   display: block;
   border-radius: 10px;
 }
 
-.mobile-wrapper .mobile .screen .content .coffee3 {
+.mobile-wrapper .mobile .screen .content .coldDrinks {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .frappe {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .beanCoffee {
+  width: 100%;
+  height: 160px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .hario {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .chemex {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .moka {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .aero {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .matcha {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .kbch {
   width: 100%;
   height: 150px;
   display: block;
@@ -319,6 +375,7 @@ button {
   height: 150px;
   display: block;
   border-radius: 10px;
+  border: solid 0.2vh rgba(0, 0, 0, 0.233);
 }
 
 .mobile-wrapper .mobile .screen .content > span {
