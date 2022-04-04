@@ -293,16 +293,44 @@ button {
   width: 100%;
 }
 
+.mobile-wrapper .mobile .screen .content .coffee {
+  width: 100%;
+  height: 160px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .coffee2 {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .coffee3 {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
+.mobile-wrapper .mobile .screen .content .cfdv {
+  width: 100%;
+  height: 150px;
+  display: block;
+  border-radius: 10px;
+}
+
 .mobile-wrapper .mobile .screen .content > span {
   display: block;
-  background-color: #fbf9bd;
+  background-color: #d2d2d2;
   margin: 10px 0;
   border-radius: 10px;
 }
 
 .mobile-wrapper .mobile .screen .content > span.block-title {
   width: 100%;
-  height: 20px;
+  height: 160px;
 }
 
 .mobile-wrapper .mobile .screen .content > span.block-text {
