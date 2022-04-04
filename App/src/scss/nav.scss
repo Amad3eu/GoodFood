@@ -220,7 +220,7 @@ button {
                     }
                 }
             }
-            .content {
+              .content {
                 padding: 0 10px;
                 padding-top: 98px;
                 padding-bottom: 60px;
@@ -238,11 +238,17 @@ button {
                 }
                 .coffee2 {
                     width: 100%;
-                    height: 160px;
+                    height: 150px;
                     display: block;
                     border-radius: 10px;
                 }
                 .coffee3 {
+                    width: 100%;
+                    height: 150px;
+                    display: block;
+                    border-radius: 10px;
+                }
+                .cfdv {
                     width: 100%;
                     height: 150px;
                     display: block;
