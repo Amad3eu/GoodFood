@@ -20,10 +20,9 @@ function scrollHeader() {
         previousScroll = currentScroll;
     };
 }
-scrollHeader(); //init function
+scrollHeader(); 
 
 
-// Function to toggle the menu 
 
 function toggleMenu() {
     var navToggle = document.getElementById('nav-toggle');
@@ -32,7 +31,7 @@ function toggleMenu() {
         document.body.classList.toggle("open");
     };
 }
-toggleMenu(); // init function
+toggleMenu(); 
 
 // Function for real clock
 
@@ -44,7 +43,7 @@ function updateClock() {
     // set the content of the element with the ID time to the formatted string
     target.innerHTML = [time];
 
-    // call this function again in 1000ms
-    setTimeout(updateClock, 1000);
+    // call this function again in 3000ms
+    setTimeout(updateClock, 3000);
 }
 updateClock(); // init function
