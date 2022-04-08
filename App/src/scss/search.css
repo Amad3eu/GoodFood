@@ -1,3 +1,70 @@
+body {
+  margin: 5%;
+}
+
+.search-box {
+  -webkit-transition: width 0.5s, border-radius 0.5s, background 0.5s, -webkit-box-shadow 0.5s;
+  transition: width 0.5s, border-radius 0.5s, background 0.5s, -webkit-box-shadow 0.5s;
+  transition: width 0.5s, border-radius 0.5s, background 0.5s, box-shadow 0.5s;
+  transition: width 0.5s, border-radius 0.5s, background 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #ebebeb;
+}
+
+.search-box + label .search-icon {
+  color: black;
+}
+
+.search-box:hover {
+  color: white;
+  background: #c8c8c8;
+  -webkit-box-shadow: 0 0 0 5px #3d4752;
+          box-shadow: 0 0 0 5px #3d4752;
+}
+
+.search-box:hover + label .search-icon {
+  color: white;
+}
+
+.search-box:focus {
+  -webkit-transition: width 0.5s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.5s, background 0.5s;
+  transition: width 0.5s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.5s, background 0.5s;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-left: 15px;
+  cursor: text;
+  width: 150px;
+  border-radius: auto;
+  background: #E0DCB4;
+  color: black;
+}
+
+.search-box:focus + label .search-icon {
+  color: black;
+}
+
+.search-box:not(:focus) {
+  text-indent: -5000px;
+}
+
+#search-submit {
+  position: relative;
+  left: -5000px;
+}
+
+.search-icon {
+  position: relative;
+  left: -30px;
+  color: white;
+  cursor: pointer;
+}
+
 html {
   background: #f3f3f3;
   font-family: 'Roboto', sans-serif;
@@ -167,7 +234,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: rgba(216, 214, 79, 0.562);
+  background-color: #F3D381;
   background-position: center center;
   background-size: cover;
   padding-left: 10px;
@@ -278,7 +345,7 @@ button {
 
 .mobile-wrapper .mobile .screen .content {
   padding: 0 10px;
-  padding-top: 98px;
+  padding-top: 108px;
   padding-bottom: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,11 +360,11 @@ button {
   width: 100%;
 }
 
-.mobile-wrapper .mobile .screen .content .coffee {
-  width: 100%;
-  height: 160px;
+.mobile-wrapper .mobile .screen .content .burguer {
   display: block;
   border-radius: 10px;
+  width: 100%;
+  height: 78px;
 }
 
 .mobile-wrapper .mobile .screen .content .coffee2 {
