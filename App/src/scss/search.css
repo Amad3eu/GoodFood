@@ -1,7 +1,4 @@
-body {
-  margin: 5%;
-}
-
+@import url(https://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css);
 .search-box {
   -webkit-transition: width 0.5s, border-radius 0.5s, background 0.5s, -webkit-box-shadow 0.5s;
   transition: width 0.5s, border-radius 0.5s, background 0.5s, -webkit-box-shadow 0.5s;
@@ -234,7 +231,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #F3D381;
+  background-color: rgba(184, 135, 11, 0.473);
   background-position: center center;
   background-size: cover;
   padding-left: 10px;
@@ -360,16 +357,16 @@ button {
   width: 100%;
 }
 
-.mobile-wrapper .mobile .screen .content .burguer {
+.mobile-wrapper .mobile .screen .content .MID {
   display: block;
   border-radius: 10px;
   width: 100%;
-  height: 78px;
+  height: 90px;
 }
 
-.mobile-wrapper .mobile .screen .content .coffee2 {
+.mobile-wrapper .mobile .screen .content .BIG {
   width: 100%;
-  height: 150px;
+  height: 148px;
   display: block;
   border-radius: 10px;
 }
@@ -397,17 +394,17 @@ button {
 
 .mobile-wrapper .mobile .screen .content > span.block-title {
   width: 100%;
-  height: 78px;
+  height: 18px;
 }
 
 .mobile-wrapper .mobile .screen .content > span.block-text {
   width: 100%;
-  height: 78px;
+  height: 148px;
 }
 
 .mobile-wrapper .mobile .screen .content > span.block-text.semi {
   width: calc(50% - 10px);
-  height: 78px;
+  height: 90px;
   margin: 5px;
 }
 
