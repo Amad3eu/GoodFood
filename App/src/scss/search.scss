@@ -1,3 +1,4 @@
+@import url(https://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css);
 $gray:#d2d2d2;
 $blue: #338af0;
 $yellow: #FBEF85;
@@ -7,49 +8,55 @@ $black: #000000;
 $white2: #FFFDED;
 $yelloDark: #F3D381;
 $tl: 0.5s; // transition length
-
-
-body {
-  margin: 5%;
-}
-
 .search-box {
-  transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
-  width: 40px;height: 40px;
-  border-radius: 20px;border: none;
-  cursor: pointer;
-  background: rgb(235, 235, 235);
-  & + label .search-icon {    color: black    }
-  &:hover {
-    color: white;
-    background: rgb(200, 200, 200);
-    box-shadow: 0 0 0 5px rgb(61, 71, 82);
-    & + label .search-icon {    color: white    }
-  }
-  &:focus {
-    transition: width $tl cubic-bezier(0,1.22,.66,1.39), border-radius $tl, background $tl;
-    border: none;outline: none;
-    box-shadow: none;
-    padding-left: 15px;
-    cursor: text;
-    width: 150px;
-    border-radius: auto;
-    background: #E0DCB4;
-    color: black;
-    & + label .search-icon {    color: black;    }
-  }
-  &:not(:focus) {    text-indent:-5000px;    } // for more-graceful falling back (:not browsers likely support indent)
+    transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: rgb(235, 235, 235);
+    &+label .search-icon {
+        color: black
+    }
+    &:hover {
+        color: white;
+        background: rgb(200, 200, 200);
+        box-shadow: 0 0 0 5px rgb(61, 71, 82);
+        &+label .search-icon {
+            color: white
+        }
+    }
+    &:focus {
+        transition: width $tl cubic-bezier(0, 1.22, .66, 1.39), border-radius $tl, background $tl;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        padding-left: 15px;
+        cursor: text;
+        width: 150px;
+        border-radius: auto;
+        background: #E0DCB4;
+        color: black;
+        &+label .search-icon {
+            color: black;
+        }
+    }
+    &:not(:focus) {
+        text-indent: -5000px;
+    } // for more-graceful falling back (:not browsers likely support indent)
 }
 
 #search-submit {
-  position: relative;left: -5000px;
+    position: relative;
+    left: -5000px;
 }
 
 .search-icon {
-  position: relative;
-  left: -30px;
-  color: white;
-  cursor: pointer;
+    position: relative;
+    left: -30px;
+    color: white;
+    cursor: pointer;
 }
 
 html {
@@ -174,12 +181,11 @@ button {
                 top: 0;
                 width: 100%;
                 z-index: 6;
-                transition: all ease 500ms; 
-              
+                transition: all ease 500ms;
                 .navbar {
                     padding-top: calc(34px + 15px);
                     display: flex;
-                    background-color: $yelloDark;
+                    background-color: rgba(184, 135, 11, 0.473);
                     background-position: center center;
                     background-size: cover;
                     padding-left: 10px;
@@ -277,15 +283,15 @@ button {
                 position: relative;
                 flex: 1;
                 width: 100%;
-                .burguer {
+                .MID {
                     display: block;
                     border-radius: 10px;
-  width: 100%;
-                        height: 78px;
-                }
-                .coffee2 {
                     width: 100%;
-                    height: 150px;
+                    height: 90px;
+                }
+                .BIG {
+                    width: 100%;
+                    height: 148px;
                     display: block;
                     border-radius: 10px;
                 }
@@ -308,14 +314,14 @@ button {
                     border-radius: 10px;
                     &.block-title {
                         width: 100%;
-                        height: 78px;
+                        height: 18px;
                     }
                     &.block-text {
                         width: 100%;
-                        height: 78px;
+                        height: 148px;
                         &.semi {
                             width: calc(50% - 10px);
-                          height:78px;
+                            height: 90px;
                             margin: 5px;
                         }
                     }
