@@ -4,13 +4,16 @@ body {
 }
 
 .wrap-mobile {
-    margin: auto;
+    border-radius: 20px;
     width: 300px;
-    height: 594px;
+    height: 700px;
+    background: white;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     overflow: hidden;
-    position: relative;
-    background: #FFFDED;
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
 .area {
