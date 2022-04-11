@@ -18,14 +18,14 @@ body {
 }
 
 .detalhe {
-
     border: solid #EB6767;
     background-color: #EB6767;
     border-radius: 20px;
     width: 300px;
     height: 15px;
     margin-top: 0px;
-
+    justify-content: center;
+    align-items: center;
 }
 
 .inicio_pag2 {
@@ -37,28 +37,15 @@ body {
     font-family: 'Work Sans', sans-serif;
     font-size: 15px;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 20px;
 }
 
 .botao_restaurante {
     text-decoration: underline;
 }
 
-.parceria {
-    border: 1px solid #57420D;
-    background-color: #F3D381;
-    border-radius: 10px;
-    height: 150px;
-}
-
-.parceria_texto {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 20px;
-    margin: 20px;
-}
-
 .entrega {
-    margin-left: 5px;
+    margin: 1em;
     margin-top: 20px;
     font-family: 'Work Sans', sans-serif;
     font-size: 12px;
@@ -71,8 +58,8 @@ body {
 .entrega #entrega_casa {
     border: solid #FBEF85;
     background: #FBEF85;
-    border-radius: 10px;
-    width: 150px;
+    border-radius: 8px;
+    width: 130px;
     height: 20px;
     justify-content: flex-start;
     display: flex;
@@ -82,7 +69,7 @@ body {
 .entrega #entrega_retirada {
     border: solid #FBEF85;
     background: #FBEF85;
-    border-radius: 10px;
+    border-radius: 8px;
     width: 130px;
     height: 20px;
     display: flex;
@@ -90,38 +77,18 @@ body {
     align-items: flex-end;
 }
 
-.tipo_comida {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-}
-
-.tipo_comida #sushi {
-    width: 80px;
-    height: 20px;
-}
-
-.tipo_comida #bebida {
-    width: 80px;
-    height: 20px;
-}
-
-.tipo_comida #lanche {
-    width: 80px;
-    height: 20px;
-}
-
 .opcoes {
-    margin-top: 70px;
+    margin-top: 2em;
 }
 
 #texto_opcoes {
+    margin-left: 10px;
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
 }
 
 .opcao1e2 {
-    margin-top: 10px;
+    margin: 1em 10px 10px;
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -130,8 +97,8 @@ body {
 
 .opcao1e2 #opcao1 {
     border: 2px solid black;
-    width: 186px;
-    height: 132px;
+    width: 146px;
+    height: 102px;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -141,10 +108,9 @@ body {
 
 .opcao1e2 #opcao2 {
     border: 2px solid black;
-    width: 186px;
-    height: 132px;
+    width: 146px;
+    height: 102px;
     border-radius: 10px;
-    justify-content: flex-start;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -153,7 +119,7 @@ body {
 }
 
 .opcao3e4 {
-    margin-top: 20px;
+    margin: 10px;
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -161,8 +127,8 @@ body {
 
 .opcao3e4 #opcao3 {
     border: 2px solid black;
-    width: 186px;
-    height: 132px;
+    width: 146px;
+    height: 102px;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -172,8 +138,8 @@ body {
 
 .opcao3e4 #opcao4 {
     border: 2px solid black;
-    width: 186px;
-    height: 132px;
+    width: 146px;
+    height: 102px;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
