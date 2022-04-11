@@ -115,76 +115,25 @@
                 <div class="footer">
                     <ul>
                         <li>
-                            <button class="button" type="button"><i class="far fa-home-lg-alt"></i>Home</button>
+                            <button class="button" type="button" onclick="location.href='/App/src/views/tela_inicio.html'"><i class="far fa-home-lg-alt"></i>Home</button>
                         </li>
                         <li>
-                            <button type="button"><i class="far fa-search"></i>Search</button>
+                            <button type="button" onclick="location.href='/App/src/views/search.html'"><i class=" far fa-search "></i>Search</button>
                         </li>
                         <li>
-                            <button class="active" type="button"><i class="fi fi-rr-list"></i>AreaCd</button>
+                            <button class="button " type="button " onclick=" location.href='/App/src/views/request.html'"><i class="fi fi-rr-list "></i>AreaCd</button>
                         </li>
                         <li>
-                            <button type="button" data-notification="5"><i class="fi fi-sr-user"></i>Messages</button>
+                            <button type="button " data-notification="5 " onclick=" location.href='/App/src/views/app.html'"><i class="fi fi-sr-user "></i>Messages</button>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
-    <script>
-        // Function for scrolling header
-
-        function scrollHeader() {
-            var header = document.getElementById('header'),
-                headerHeight = header.offsetHeight, // Header height
-                content = document.getElementById('content'),
-                previousScroll = content.scrollTop; // Get onload Scrolling
-
-            content.onscroll = function() {
-                currentScroll = content.scrollTop; // Get the current scrolling position
-
-                // Hide the header only if the header height is scroll
-                if (currentScroll > headerHeight) {
-                    if (currentScroll > previousScroll) {
-                        header.style.transform = 'translateY(-' + headerHeight + 'px)'; // Hide header
-                    } else {
-                        header.style.transform = 'translateY(0)'; // Show header
-                    }
-                }
-                previousScroll = currentScroll;
-            };
-        }
-        scrollHeader(); //init function
-
-
-        // Function to toggle the menu 
-
-        function toggleMenu() {
-            var navToggle = document.getElementById('nav-toggle');
-
-            navToggle.onclick = function() {
-                document.body.classList.toggle("open");
-            };
-        }
-        toggleMenu(); // init function
-
-        // Function for real clock
-
-        function updateClock() {
-            var now = new Date(), // current date
-                time = now.getHours() + ':' + now.getMinutes(),
-                target = document.getElementById('time');
-
-            // set the content of the element with the ID time to the formatted string
-            target.innerHTML = [time];
-
-            // call this function again in 1000ms
-            setTimeout(updateClock, 1000);
-        }
-        updateClock(); // init function
-    </script>
-
+    <script src="/App/src/script/style.js"></script>
 
 </body>
 
