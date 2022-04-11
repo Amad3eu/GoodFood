@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
 $color_white: #fff;
+$color_dark: #000;
 $color_prime: #5ad67d;
 $color_grey: #e2e2e2;
 $color_grey_dark: #a2a2a2;
+$yelloDark: #f3d381;
 .blog-card {
     display: flex;
     flex-direction: column;
-    margin: 1rem auto;
+    margin: 1rem 15px;
     box-shadow: 0 3px 7px -1px rgba(#000, .1);
     margin-bottom: 1.6%;
     background: $color_white;
@@ -17,7 +20,7 @@ $color_grey_dark: #a2a2a2;
     a {
         color: inherit;
         &:hover {
-            color: $color_prime;
+            color: $yelloDark;
         }
     }
     &:hover {
@@ -62,17 +65,7 @@ $color_grey_dark: #a2a2a2;
             text-decoration: dotted underline
         }
         ul li {
-            display: inline-block;
-        }
-        .author:before {
-            font-family: FontAwesome;
-            margin-right: 10px;
-            content: "\f007";
-        }
-        .date:before {
-            font-family: FontAwesome;
-            margin-right: 10px;
-            content: "\f133";
+            display: inline-block
         }
         .tags {
             ul:before {
@@ -95,7 +88,7 @@ $color_grey_dark: #a2a2a2;
         z-index: 1;
         h1,
         h2 {
-            font-family: Poppins, sans-serif;
+            font-family: 'Work Sans';
         }
         h1 {
             line-height: 1;
@@ -109,14 +102,14 @@ $color_grey_dark: #a2a2a2;
             margin-top: 5px;
         }
         .read-more {
+            font-family: 'Work Sans';
             text-align: right;
             a {
-                color: $color_prime;
+                color: darkgoldenrod;
                 display: inline-block;
                 position: relative;
                 &:after {
-                    content: "\f061";
-                    font-family: FontAwesome;
+                    font-family: 'Work Sans';
                     margin-left: -10px;
                     opacity: 0;
                     vertical-align: middle;
@@ -138,7 +131,7 @@ $color_grey_dark: #a2a2a2;
                 content: "";
                 position: absolute;
                 height: 5px;
-                background: $color_prime;
+                background: $yelloDark;
                 width: 35px;
                 top: -0.75rem;
                 border-radius: 3px;
