@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
 .blog-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,7 +7,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 1rem auto;
+  margin: 1rem 15px;
   -webkit-box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
   margin-bottom: 1.6%;
@@ -23,7 +24,7 @@
 }
 
 .blog-card a:hover {
-  color: #5ad67d;
+  color: #f3d381;
 }
 
 .blog-card:hover .photo {
@@ -82,18 +83,6 @@
   display: inline-block;
 }
 
-.blog-card .details .author:before {
-  font-family: FontAwesome;
-  margin-right: 10px;
-  content: "\f007";
-}
-
-.blog-card .details .date:before {
-  font-family: FontAwesome;
-  margin-right: 10px;
-  content: "\f133";
-}
-
 .blog-card .details .tags ul:before {
   font-family: FontAwesome;
   content: "\f02b";
@@ -117,7 +106,7 @@
 
 .blog-card .description h1,
 .blog-card .description h2 {
-  font-family: Poppins, sans-serif;
+  font-family: 'Work Sans';
 }
 
 .blog-card .description h1 {
@@ -134,18 +123,18 @@
 }
 
 .blog-card .description .read-more {
+  font-family: 'Work Sans';
   text-align: right;
 }
 
 .blog-card .description .read-more a {
-  color: #5ad67d;
+  color: darkgoldenrod;
   display: inline-block;
   position: relative;
 }
 
 .blog-card .description .read-more a:after {
-  content: "\f061";
-  font-family: FontAwesome;
+  font-family: 'Work Sans';
   margin-left: -10px;
   opacity: 0;
   vertical-align: middle;
@@ -171,7 +160,7 @@
   content: "";
   position: absolute;
   height: 5px;
-  background: #5ad67d;
+  background: #f3d381;
   width: 35px;
   top: -0.75rem;
   border-radius: 3px;
