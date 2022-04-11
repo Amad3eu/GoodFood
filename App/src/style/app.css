@@ -84,40 +84,7 @@ h3 {
 }
 
 
-/* .aside {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background: #339af0;
-    z-index: 5;
-    overflow: auto;
-    width: 100%;
-    transform: translateX(-100%);
-    transition: all ease 500ms;
-}
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    padding-top: 95px;
-}
-
-li {
-    cursor: pointer;
-    padding: 20px 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-weight: 100;
-    position: relative;
-}
-
-i {
-    font-size: 30px;
-    margin-right: 25px;
-} */
 
 .guia {
     margin-left: 10px;
