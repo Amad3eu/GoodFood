@@ -46,7 +46,7 @@ function updateClock() {
 
   target.innerHTML = [time]; // call this function again in 1000ms
 
-  setTimeout(updateClock, 1000);
+  setTimeout(updateClock, 3000);
 }
 
 updateClock(); // init function
