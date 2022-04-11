@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,500&display=swap');
-
-body{
+body {
     background-color: #FFFDED;
 }
-.detalhe{
+
+.wrap-mobile {
+    border-radius: 20px;
+    width: 300px;
+    height: 700px;
+    background: white;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.detalhe {
     border: solid #EB6767;
     background-color: #EB6767;
     border-radius: 20px;
@@ -14,7 +27,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.inicio_pag2{
+
+.inicio_pag2 {
     display: flex;
     flex-direction: row;
     margin: 30px;
@@ -25,22 +39,25 @@ body{
     justify-content: space-evenly;
     gap: 20px;
 }
-.botao_restaurante{
+
+.botao_restaurante {
     text-decoration: underline;
 }
 
-.parceria{
+.parceria {
     border: 1px solid #57420D;
     background-color: #F3D381;
     border-radius: 10px;
     height: 150px;
 }
-.parceria_texto{
+
+.parceria_texto {
     font-family: 'Permanent Marker', cursive;
     font-size: 20px;
     margin: 20px;
 }
-.entrega{
+
+.entrega {
     margin-top: 20px;
     font-family: 'Work Sans', sans-serif;
     font-size: 15px;
@@ -49,7 +66,8 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-.entrega #entrega_casa{
+
+.entrega #entrega_casa {
     border: solid #FBEF85;
     background: #FBEF85;
     border-radius: 10px;
@@ -59,7 +77,8 @@ body{
     display: flex;
     flex-direction: row;
 }
-.entrega #entrega_retirada{
+
+.entrega #entrega_retirada {
     border: solid #FBEF85;
     background: #FBEF85;
     border-radius: 10px;
@@ -69,38 +88,46 @@ body{
     flex-direction: row;
     align-items: flex-end;
 }
-.tipo_comida{
+
+.tipo_comida {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
 }
-.tipo_comida #sushi{
+
+.tipo_comida #sushi {
     width: 80px;
     height: 20px;
 }
-.tipo_comida #bebida{
+
+.tipo_comida #bebida {
     width: 80px;
     height: 20px;
 }
-.tipo_comida #lanche{
+
+.tipo_comida #lanche {
     width: 80px;
     height: 20px;
 }
-.opcoes{
+
+.opcoes {
     margin-top: 70px;
 }
-#texto_opcoes{
+
+#texto_opcoes {
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
 }
-.opcao1e2{
+
+.opcao1e2 {
     margin-top: 10px;
     display: flex;
     flex-direction: row;
     gap: 30px;
-   align-items: center;
+    align-items: center;
 }
-.opcao1e2 #opcao1{
+
+.opcao1e2 #opcao1 {
     border: 2px solid black;
     width: 186px;
     height: 132px;
@@ -110,7 +137,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.opcao1e2 #opcao2{
+
+.opcao1e2 #opcao2 {
     border: 2px solid black;
     width: 186px;
     height: 132px;
@@ -122,13 +150,15 @@ body{
     justify-content: center;
     align-items: center;
 }
-.opcao3e4{
+
+.opcao3e4 {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
-.opcao3e4 #opcao3{
+
+.opcao3e4 #opcao3 {
     border: 2px solid black;
     width: 186px;
     height: 132px;
@@ -138,7 +168,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.opcao3e4 #opcao4{
+
+.opcao3e4 #opcao4 {
     border: 2px solid black;
     width: 186px;
     height: 132px;
