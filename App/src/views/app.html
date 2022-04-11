@@ -1,70 +1,140 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/src/icon/user.png" type="image/x-icon">
-    <link rel="stylesheet" href="/App/src/style/app.css">
     <link rel="stylesheet" href="/App/src/scss/bar_app.css">
+    <link rel="stylesheet" href="/App/src/scss/nav.css">
+    <script src="/App/src/script/style.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
-    <title>Login</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <title>Área Cd</title>
 </head>
 
 <body>
-    <div class="wrap-mobile">
-        <div class="area">
-            <div class="container">
-                <div class="left">
-                    <img class="image" src="/App/src/img/image (34) (2).png" alt="" height="120px" width="120px" />
-                    <h3 class="username">Cesar Oliveira</h3>
-                    <h4 class="username-email">cesaroliveirac@gmail.com</h4>
+    <div class="mobile-wrapper">
+        <div class="mobile">
+            <div class="photo"></div>
+            <div class="screen">
+                <div id="os-header" class="os-header">
+                    <div class="notch-left">
+                        <i class="fad fa-signal-4"></i>
+                        <i class="fad fa-flask-potion"></i>
+                    </div>
+
+                    <div class="notch-right">
+                        <i class="far fa-battery-half"></i>
+                        <span id="time" class="hour"></span>
+                    </div>
+                </div>
+                <div id="header" class="header">
+                    <div class="navbar">
+                        <button type="button" id="nav-toggle" class="nav-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                        <div class="logo">
+                            <i class="fi fi-br-mug-hot"> Área Cafeística</i>
+                        </div>
+
+                        <button class="user" type="button">
+                            <img src="/App/src/img/image (34) (2).png" />
+                        </button>
+                    </div>
+                </div>
+
+                <div id="aside" class="aside">
+                    <ul>
+                        <li><i class="fi fi-sr-shopping-cart"></i>Mercado</li>
+                        <li><i class="fi fi-sr-medicine"></i> Farmacia</li>
+                        <li><i class="fi fi-rr-restaurant"></i> Famosos no GoodFood</li>
+                        <li><i class="fad fa-user-headset"></i>SAC</li>
+                    </ul>
+                </div>
+
+                <div id="content" class="content">
+                    <span class="block-title">
+                        <img class="expressCoffee"
+                            src="https://images.pexels.com/photos/4354609/pexels-photo-4354609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" />
+                    </span>
+
+                    <span class="block-text"><img class="cappuccino"
+                            src="https://images.pexels.com/photos/531874/pexels-photo-531874.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" height="120px" width="120px" /> </span>
+
+                    <span class="block-text semi"><img class="coldDrinks"
+                            src="https://images.pexels.com/photos/7474155/pexels-photo-7474155.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" height="120px" width="120px" /> </span>
+                    <span class="block-text semi"><img class="coldDrinks"
+                            src="https://images.pexels.com/photos/5946982/pexels-photo-5946982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" height="120px" width="120px" /> </span>
+                    <span class="block-text"><img class="frappe"
+                            src="https://images.pexels.com/photos/7091587/pexels-photo-7091587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" height="120px" width="120px" /></span>
+
+                    <span class="block-title"><img class="beanCoffee"
+                            src="https://images.pexels.com/photos/1323730/pexels-photo-1323730.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" height="120px" width="120px" /></span>
+                    <span class="block-text"><img class="hario"
+                            src="https://images.pexels.com/photos/4354621/pexels-photo-4354621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" height="120px" width="120px" /></span>
+                    <span class="block-text"><img class="chemex"
+                            src="https://images.pexels.com/photos/5480759/pexels-photo-5480759.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" height="120px" width="120px" /></span>
+
+                    <span class="block-title"><img class="moka"
+                            src="https://images.pexels.com/photos/6766714/pexels-photo-6766714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" /></span>
+                    <span class="block-text"><img class="aero"
+                            src="https://images.pexels.com/photos/5461656/pexels-photo-5461656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" /></span>
+
+                    <span class="block-text semi"><img class="matcha"
+                            src="https://images.pexels.com/photos/2611811/pexels-photo-2611811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" /></span>
+                    <span class="block-text semi"><img class="kbch"
+                            src="https://images.pexels.com/photos/8475719/pexels-photo-8475719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="" /></span>
+                    <span class="block-text"><img class="cfdv" src="/App/src/img/Logo Minimalista (2).png"
+                            alt="" /></span>
+
+                </div>
+
+                <div class="footer">
+                    <ul>
+                        <li>
+                            <button class="button" type="button" onclick="location.href='/App/src/views/tela_inicio.html'"><i class="far fa-home-lg-alt"></i>Home</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="location.href='/App/src/views/search.html'"><i class=" far fa-search "></i>Search</button>
+                        </li>
+                        <li>
+                            <button class="button " type="button " onclick=" location.href='/App/src/views/request.html'"><i class="fi fi-rr-list "></i>AreaCd</button>
+                        </li>
+                        <li>
+                            <button type="button " data-notification="5 " onclick=" location.href='/App/src/views/app.html'"><i class="fi fi-sr-user "></i>Messages</button>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="guia">
-            <p> <i class="fi fi-sr-mode-portrait"></i> Informações da conta</p>
-            <p><i class="fi fi-sr-comment-alt"></i> Chat
-            </p>
-            <p> <i class="fi fi-sr-ticket"></i> Cupons
-            </p>
-            <p> <i class="fi fi-sr-star"></i> Favoritos</p>
-            <p> <i class="fi fi-sr-credit-card"></i> Carteira
-            </p>
-            <p> <i class="fi fi-sr-mug-hot"></i> CoffeDev</p>
-
-            <h4 onclick="location.href='/principal.html'"> <i class="fi fi-bs-sign-out">  logout </i>
-            </h4>
-        </div>
-
-        <div class="footer">
-            <ul>
-                <li>
-                    <button class="button" type="button" onclick="location.href='/App/src/views/tela_inicio.html'"><i class="far fa-home-lg-alt"></i>Home</button>
-                </li>
-                <li>
-                    <button class="button" onclick="location.href='/App/src/views/search.html'"><i class=" far fa-search "></i>Search</button>
-                </li>
-                <li>
-                    <button class="button " type="button " onclick=" location.href='/App/src/views/request.html'"><i class="fi fi-rr-list "></i>AreaCd</button>
-                </li>
-                <li>
-                    <button class=" active" onclick=" location.href='/App/src/views/app.html'"><i class="fi fi-sr-user "></i>Messages</button>
-                </li>
-            </ul>
-        </div>
-
     </div>
     </div>
-    </div>
+
+    <script src="/App/src/script/style.js"></script>
 
 </body>
-<script href="/App/src/script/style.js"></script>
+
 
 </html>
