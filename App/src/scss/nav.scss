@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;1,200&display=swap');
 $gray:#d2d2d2;
 $blue: #338af0;
 $yellow: #FBEF85;
@@ -147,7 +148,7 @@ button {
                         span {
                             display: block;
                             height: 3px;
-                            background: rgb(7, 6, 6);
+                            background: rgb(255, 255, 255);
                             position: absolute;
                             border-radius: 5px;
                             transition: all ease 250ms;
