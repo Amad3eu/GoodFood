@@ -5,7 +5,6 @@ html {
   min-height: 100%;
 }
 html:before {
-  content: "";
   position: absolute;
   width: 50%;
   height: 100%;
@@ -15,13 +14,12 @@ html:before {
   z-index: 1;
 }
 html:after {
-  content: "";
   position: absolute;
   width: 50%;
   height: 100%;
   right: 0;
   top: 0;
-  background: #FFFDED;
+  background: #fffded;
   z-index: 1;
 }
 
@@ -130,7 +128,7 @@ button {
 .mobile-wrapper .mobile .screen .header .navbar {
   padding-top: calc(34px + 15px);
   display: flex;
-  background-color: #F3D381;
+  background-color: #f3d381;
   background-position: center center;
   background-size: cover;
   padding-left: 10px;

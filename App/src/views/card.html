@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/App/src/style/card.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <title>Card</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Tarjeta -->
+      <section id="card" class="card">
+        <div class="front-card">
+          <div id="logo-card" class="logo-card"></div>
+          <img
+            src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png"
+            alt="Chip"
+            title="Chip"
+            class="chip"
+          />
+
+          <div class="info-card-front">
+            <div id="group-number-card" class="group-number-card">
+              <p class="label-card">Número</p>
+
+              <p class="number-card">**** **** **** ****</p>
+            </div>
+
+            <div class="flexbox">
+              <div id="group-name-card" class="group-name-card">
+                <p class="label-card">Nome</p>
+
+                <p class="name-card">Cesar Oliveira</p>
+              </div>
+
+              <div id="group-expiration-card" class="group-expiration-card">
+                <p class="expiration-card">
+                  <span class="mounth-expiration-card"> MM </span>
+                  /
+                  <span class="year-expiration-card"> AA </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="back-card">
+          <div class="magnetic-bar-card"></div>
+
+          <div class="info-card-back">
+            <div id="group-firm-card" class="group-firm-card">
+              <div class="firm-card">
+                <p>Cesar Oliveira</p>
+              </div>
+            </div>
+
+            <div id="group-ccv-card" class="group-ccv-card">
+              <p class="label-card">CCV</p>
+
+              <p class="ccv-card"></p>
+            </div>
+          </div>
+
+          <p class="legend-card">
+            Caso ocorrer algo não desejado entre em contato pelo site:
+          </p>
+
+          <a class="link-bank-card" href="javascript:void(0);">
+            www.gdfd.com
+          </a>
+        </div>
+      </section>
+
+      <div class="ctn-btn">
+        <button
+          type="button"
+          id="btn-open-form-card"
+          class="btn-open-form-card"
+        >
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+
+      <form
+        action="javascript:void(0);"
+        id="form-card"
+        class="form-card active"
+      >
+        <div>
+          <label for="number-card-form"> Número</label>
+
+          <input
+            type="text"
+            id="number-card-form"
+            maxlength="19"
+            autocomplete="off"
+          />
+        </div>
+
+        <div>
+          <label for="name-card-form"> Nome </label>
+
+          <input
+            type="text"
+            id="name-card-form"
+            maxlength="20"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="flexbox">
+          <div class="group-expiration-card-form">
+            <label for="mounth-expiration-card-form"></label>
+
+            <div class="flexbox">
+              <div class="group-select">
+                <select id="mounth-expiration-card-form">
+                  <option disabled="disabled" selected="selected">Mês</option>
+                </select>
+                <i class="fas fa-angle-down"></i>
+              </div>
+
+              <div class="group-select">
+                <select id="year-expiration-card-form">
+                  <option disabled="disabled" selected="selected">Ano</option>
+                </select>
+                <i class="fas fa-angle-down"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="group-ccv-card-form">
+            <label for="ccv-card-form"> CCV </label>
+
+            <input
+              type="text"
+              id="ccv-card-form"
+              maxlength="3"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="btn-send-form-card">Enviar</button>
+      </form>
+    </div>
+  </body>
+  <script src="/App/src/script/card.js"></script>
+</html>
