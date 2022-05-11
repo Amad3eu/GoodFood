@@ -2,10 +2,10 @@
 
 // Function for scrolling header
 function scrollHeader() {
-  var header = document.getElementById('header'),
+  var header = document.getElementById("header"),
       headerHeight = header.offsetHeight,
       // Header height
-  content = document.getElementById('content'),
+  content = document.getElementById("content"),
       previousScroll = content.scrollTop; // Get onload Scrolling
 
   content.onscroll = function () {
@@ -14,9 +14,9 @@ function scrollHeader() {
 
     if (currentScroll > headerHeight) {
       if (currentScroll > previousScroll) {
-        header.style.transform = 'translateY(-' + headerHeight + 'px)'; // Hide header
+        header.style.transform = "translateY(-" + headerHeight + "px)"; // Hide header
       } else {
-        header.style.transform = 'translateY(0)'; // Show header
+        header.style.transform = "translateY(0)"; // Show header
       }
     }
 
@@ -25,10 +25,10 @@ function scrollHeader() {
 }
 
 scrollHeader(); //init function
-// Function to toggle the menu 
+// Function to toggle the menu
 
 function toggleMenu() {
-  var navToggle = document.getElementById('nav-toggle');
+  var navToggle = document.getElementById("nav-toggle");
 
   navToggle.onclick = function () {
     document.body.classList.toggle("open");
@@ -41,8 +41,8 @@ toggleMenu(); // init function
 function updateClock() {
   var now = new Date(),
       // current date
-  time = now.getHours() + ':' + now.getMinutes(),
-      target = document.getElementById('time'); // set the content of the element with the ID time to the formatted string
+  time = now.getHours() + ":" + now.getMinutes(),
+      target = document.getElementById("time"); // set the content of the element with the ID time to the formatted string
 
   target.innerHTML = [time]; // call this function again in 1000ms
 
