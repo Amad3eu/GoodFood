@@ -157,8 +157,8 @@ body {
 .card .back-card .info-card-back .group-ccv-card .ccv-card {
 	background-color: #ffffff;
 	color: #000000;
-	height: 30px;
-	padding: '0 10px';
+	height: 2.9rem;
+	padding: 0.2rem 0.5rem;
 	text-align: center;
 }
 

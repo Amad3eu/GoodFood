@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodFood - Cadastro</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="/App/src/style/styles.css">
+    <link rel="stylesheet" href="/App/src/style/styles.css">
+</head>
+
+      <div class="main-login">
+
+ <div class="left-login">
+            <h1>Cadastre</br>e entre para o <span><h1 class="logo-name">GoodFood</h1></span></h1>
+            <img src="https://cdn-icons.flaticon.com/png/512/6101/premium/6101556.png?token=exp=1653428345~hmac=27516b3adfd77b64120bc83a9e2e8a44" class="left-login-image" alt="foto de gatinho amarelo levando comida">
+        </div>
+<div class="right-login">
+            <div class="card-login">
+        <!-- <form action="cadastrar()" name="cadastro"> -->
+        <form id="cadForm" name="cadForm">
+                 <div class="textfield">  
+                <label for="nome"><i class="fi fi-rr-id-badge"></i>
+
+ Nome:</label>
+                    <input type="text" name="nome" id="nome">
+                 </div>
+            <br>
+            <div class="textfield">
+                <label for="email"><i class="fi fi-rr-envelope"></i>  E-mail:</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <br>
+            <div class="textfield">
+                <label for="senha"><i class="fi fi-rr-fingerprint"></i>   Senha: </label>
+                <input type="password" name="senha" id="senha">
+            </div>
+            <br>
+            <span id="missing"></span>
+            <br>
+            <input type="submit" class="btn-login" value="submit">
+        </form>
+    </div>
+    </div>
+    </div>
+
+    <footer>
+        <script src="/App/src/script/log/utils.js"></script>
+        <script src="/App/src/db/dbWrapper.js"></script>
+        <script src="/App/src/script/registration.js"></script>
+    </footer>
+</body>
+</html>
