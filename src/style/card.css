@@ -1,0 +1,377 @@
+* {
+	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	background-color: #adc0d0;
+	font: normal 30px consolas, sans-serif;
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	max-width: 500px;
+	padding: 40px 20px;
+	width: 90%;
+}
+
+
+.card {
+	color: #ffffff;
+	cursor: pointer;
+	max-width: 550px;
+	position: relative;
+	transform: rotateY(0);
+	transform-style: preserve-3d;
+	transition: transform 0.3s ease;
+	width: 100%;
+	z-index: 3;
+}
+
+.card.active {
+	transform: rotateY(180deg);
+}
+
+.card > div {
+	border-radius: 15px;
+	box-shadow: 0 10px 10px rgba(142, 157, 175, 0.3);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 315px;
+	padding: 30px;
+}
+
+
+.card .front-card {
+	background: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1429&q=80') #000000 0 0 / cover no-repeat scroll;
+	width: 100%;
+}
+
+.card .front-card .logo-card {
+	height: 50px;
+	text-align: right;
+}
+
+.card .front-card .logo-card img {
+	height: 100%;
+	max-width: 100px;
+	object-fit: cover;
+	width: 100%;
+}
+
+.card .front-card .chip {
+	margin-bottom: 20px;
+	max-width: 50px;
+	width: 100%;
+}
+
+.card .front-card .info-card-front .label-card {
+	color: #e1e9f0;
+	font-size: 1rem;
+	margin-bottom: 5px;
+}
+
+.card .front-card .info-card-front .group-number-card .number-card,
+.card .front-card .info-card-front .group-name-card .name-card,
+.card .front-card .info-card-front .group-expiration-card, .expiration-card {
+	color: #ffffff;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+.card .front-card .info-card-front .flexbox {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+
+.card .back-card {
+	backface-visibility: hidden;
+	background: url('https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1429&q=80') #1c1c1c 0 0 / cover no-repeat scroll;
+	position: absolute;
+	top: 0;
+	transform: rotateY(180deg);
+	left: 0;
+	width: 100%;
+}
+
+.card .back-card .magnetic-bar-card {
+	background-color: #000000;
+	height: 40px;
+	left: 0;
+	position: relative;
+	top: 30px;
+	width: 100%;
+}
+
+.card .back-card .info-card-back {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+}
+
+.card .back-card .info-card-back p {
+	margin-bottom: 5px;
+}
+
+.card .back-card .info-card-back .group-firm-card {
+	width: 70%;
+}
+
+.card .back-card .info-card-back .group-firm-card .firm-card {
+	background-image: repeating-linear-gradient(
+											#4862f796 0,
+											#4862f796 5px,
+											#6a80ff87 5px,
+											#6a80ff87 10px
+										);
+	height: 40px;
+}
+
+.card .back-card .info-card-back .group-firm-card .firm-card p {
+	color: #000000;
+	font: normal 20px consolas, sans-serif;
+	line-height: 40px;
+	padding: 0 10px;
+	text-transform: capitalize;
+}
+
+.card .back-card .info-card-back .group-ccv-card {
+	width: 20%; 
+}
+
+.card .back-card .info-card-back .group-ccv-card .ccv-card {
+	background-color: #ffffff;
+	color: #000000;
+	height: 2.9rem;
+	padding: 0.2rem 0.5rem;
+	text-align: center;
+}
+
+.card .back-card .legend-card {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.container .card .back-card .link-bank-card {
+	color: #ffffff;
+ 	font-size: 14px;
+	text-decoration: none;
+}
+
+
+.ctn-btn .btn-open-form-card {
+	background-color: #2364d2;
+	border-radius: 100%;
+	border-style: none;
+	bottom: 25px;
+	box-shadow: 5px 4px 8px rgba(24, 56, 182, 0.4);
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 20px;
+	height: 50px;
+	line-height: 20px;
+	padding: 5px;
+	position: relative;
+	transition: background-color 0.3s ease-in-out,
+							transform 0.3s ease-in-out;
+	width: 50px;
+	z-index: 4;
+}
+
+.ctn-btn .btn-open-form-card:hover,
+.ctn-btn .btn-open-form-card:focus,
+.ctn-btn .btn-open-form-card:active {
+	background-color: #1850b1;
+}
+
+.ctn-btn .btn-open-form-card.active {
+	transform: rotateZ(45deg);
+}
+
+
+.form-card {
+	background-color: #ffffff;
+	border-radius: 10px;
+	bottom: 150px;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	padding: 150px 30px 30px 30px;
+	max-width: 700px;
+	position: relative;
+	transition: clip-path 0.3s ease-in-out;
+	width: 100%;
+	z-index: 2;
+}
+
+.form-card.active {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.form-card label {
+	color: #7d8994;
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 5px;
+}
+
+.form-card input,
+.form-card select,
+.form-card .btn-send-form-card {
+	border: 2px solid #ced6e0;
+	border-radius: 5px;
+	font-size: 18px;
+	height: 50px;
+	padding: 5px 12px;
+	transition: border-color 0.3s ease-in-out,
+							box-shadow 0.3s ease-in-out,
+							outline 0.3s ease-in-out;
+	width: 100%;
+}
+
+.form-card input {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.form-card select {
+	appearance: none;
+}
+
+.form-card input:hover,
+.form-card input:active,
+.form-card select:hover,
+.form-card select:active {
+	border-color: #93bded;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+	box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+	outline: #000000;
+}
+
+.form-card .flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-card .flexbox .group-expiration-card-form {
+	width: 100%;
+}
+
+.form-card .flexbox .group-expiration-card-form .group-select {
+	margin-right: 1rem;
+	position: relative;
+	width: 100%;
+}
+
+.form-card .flexbox .group-expiration-card-form .group-select i {
+	color: #ced6e0;
+	position: absolute;
+	right: 1rem;
+	top: 18px;
+	transition: color 0.3s ease;
+}
+
+.form-card .flexbox .group-expiration-card-form .group-select:hover i,
+.form-card .flexbox .group-expiration-card-form .group-select:focus i,
+.form-card .flexbox .group-expiration-card-form .group-select:active i {
+	color: #93bfed;	
+}
+
+.form-card .flexbox .group-ccv-card-form {
+	min-width: 100px;
+}
+
+.form-card .btn-send-form-card {
+	background-color: #2364d2;
+	box-shadow: 2px 2px 10px rgba(0, 85, 212, 0.4);
+	border-style: none;
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 22px;
+	padding: 10px;
+	transition: background-color 0.3s ease;
+}
+
+.form-card .btn-send-form-card:hover,
+.form-card .btn-send-form-card:focus,
+.form-card .btn-send-form-card:active {
+	background-color: #1850b1;
+}
+
+@media screen and (max-width: 550px) {
+	.card > div {
+		min-height: 200px;
+		padding: 15px 15px;
+	}
+	
+	.card .front-card .logo-card {
+		position: absolute;
+		right: 10px;
+	}
+	
+	.card .front-card .logo-card img {
+		max-width: 75px
+	}
+	
+	.card .front-card .chip {
+		max-width: 35px;
+		margin-top: 10px;
+	}
+	
+	.card .front-card .info-card-front .label-card {
+		font-size: 14px;
+	}
+	
+	.card .front-card .info-card-front .group-number-card .number-card,
+	.card .front-card .info-card-front .group-name-card .name-card,
+	.card .front-card .info-card-front .group-expiration-card,
+	.expiration-card {
+		font-size: 18px;
+	}
+	
+	.card .back-card .legend-card,
+	.container .card .back-card .link-bank-card {
+		font-size: 10px;
+	}
+	
+	.card .back-card .magnetic-bar-card {
+		height: 30px;
+		top: 15px;
+	}
+	
+	.card .back-card .info-card-back {
+		margin-top: 40px;
+	}
+	
+	.card .back-card .info-card-back .group-firm-card .firm-card p {
+		line-height: 40px;
+	}
+	
+	.card .back-card .info-card-back p {
+    font-size: 13px;
+	}
+	
+	.form-card .flexbox {
+		flex-direction: column;
+	}
+	
+	.form-card select {
+		margin-bottom: 1rem;
+	}
+}

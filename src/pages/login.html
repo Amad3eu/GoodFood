@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodFood - Login</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="/src/style/styles.css">
+</head>
+
+   <div class="main-login">
+        <div class="left-login">
+            <h1>Faça o Login</br>e entre no <span class="logo-name">GoodFood</span></h1>
+            <img src="https://cdn-icons.flaticon.com/png/512/6101/premium/6101455.png?token=exp=1653428381~hmac=bd6d72cbe0aaf785f6af47bebd74c1c3" class="left-login-image" alt="foto de gatinho cozinhando" >
+        </div>
+<div class="right-login">
+            <div class="card-login">
+   
+        <!-- <form action="cadastrar()" name="cadastro"> -->
+        <form id="logForm" name="logForm">
+            <div class="textfield">
+            <label for="email"><i class="fi fi-rr-envelope"></i>
+E-mail:</label>
+                         
+            <input type="text" name="email" id="email" placeholder="Digite o e-mail">
+            <br>
+            <label for="senha"><i class="fi fi-rr-fingerprint"></i>
+Senha: </label>
+            <input type="password" name="senha" id="senha"placeholder="Digite a senha">
+            <br>
+            </div>
+            <span id="missing"></span>
+            <br>
+            <input class="btn-login" type="submit" value="enviar">
+        </form>
+</div>
+</div>
+    <footer>
+        <script src="/src/script/log/utils.js"></script>
+        <script src="/src/db/dbWrapper.js"></script>
+        <script src="/src/script/login.js"></script>
+    </footer>
+</body>
+</html>
