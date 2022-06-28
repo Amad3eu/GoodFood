@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Nunito:700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  /* describe custom properties, updated in the script to match the light / dark theme */
+  --background: #fff;
+  --color: #222;
+  /* shadow applied on one of the pseudo element to remark the state of the checkbox */
+  --shadow: #ddd;
+
+  /* include two overlapping circle with the gradient matching the svg displayed in the UI
+  two circles to hide/show the top one when the theme is toggled
+  */
+  background-position-x: 50%;
+  background-position-y: 0%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  color: var(--color);
+  font-family: "Lato", sans-serif;
+  /* include a transition for the color and background-color exclusively */
+  transition-property: color, background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+    margin-top:9rem;
+}
+
+/* for the phone UI specify a tall, thin, rounded rectangle */
+div.phone {
+  max-width: 280px;
+  margin: 2rem auto ;
+  border-radius: 25px;
+  background: var(--background);
+  box-shadow: 0 0 15px -5px hsla(0, 0%, 0%, 0.4),
+    0 1px 5px -4px hsla(0, 0%, 0%, 1);
+  /* display the content in a centered row */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* have the navigation stretch horizontally */
+.phone--nav {
+  align-self: stretch;
+  /* display the content in a vertically aligned row */
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.phone--nav span {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+/* resize the icons to a smaller measure */
+.phone--nav svg {
+  margin: 0 0.1rem;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.phone--theme {
+  margin: 2rem 0;
+  align-self: center;
+}
+
+.phone--brief {
+  text-align: center;
+  line-height: 2;
+}
+.phone--brief h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+}
+.phone--brief p {
+  font-size: 0.8rem;
+}
+
+/* increase the white space around the form */
+.phone--toggle {
+  margin: 2rem 0;
+}
+/* visually conceal the checkbox */
+.phone--toggle input[type="checkbox"] {
+  /* display: none; */
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* expand the label to show the options as if two side of a toggle */
+.phone--toggle label {
+  word-spacing: 3rem;
+  font-size: 0.7rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  /* z-index to show the label atop the pseudo elements */
+  z-index: 5;
+  /* position relative to position the pseudo elements */
+  position: relative;
+}
+/* include the :before pseudo element as the label's background */
+.phone--toggle label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--shadow);
+  border-radius: inherit;
+  z-index: -5;
+}
+/* include the :after pseudo element as the smaller rectangle highlighting the current selection */
+.phone--toggle label:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--background);
+  border-radius: inherit;
+  box-shadow: 0 0 2px hsla(0, 0%, 0%, 0.4);
+  z-index: -5;
+  /* transition for the transform property
+  */
+  transition: transform 0.25s ease-out;
+}
+/* translate the element to the right when an arbitrary class is applied on the form */
+.phone--toggle.checked label:after {
+  transform: translate(100%, 0);
+}
+/* when the input is focused add a shadow to the sibling label */
+.phone--toggle input:focus + label {
+  box-shadow: 0 0 4px hsla(0, 0%, 0%, 0.4);
+}
+
+/* describe the pagination with rounded buttons positioned side by side */
+.phone--pagination {
+  margin-bottom: 3.5rem;
+}
+.phone--pagination button {
+  background: var(--color);
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
+  border: none;
+}
+.phone--pagination button:nth-of-type(2) {
+  width: 12px;
+  border-radius: 20px;
+}
+
+/* position the elements of the footer at either side of the phone */
+.phone--footer {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.phone--footer button {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+.phone--footer button:nth-of-type(2) {
+  width: 38px;
+  height: 38px;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 5px -2px hsla(0, 0%, 0%, 0.4);
+}
+
+.phone--footer a{
+color: #000;
+cursor:pointer;
+}

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&display=swap");
 .blog-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,17 +124,18 @@
 }
 
 .blog-card .description .read-more {
-  font-family: 'Work Sans';
+  font-family: 'Fira Sans Condensed', sans-serif;
   text-align: right;
+  font-weight: bold;
 }
 
-.blog-card .description .read-more a {
-  color: darkgoldenrod;
+.blog-card .description .read-more button {
+  color: #141414;
   display: inline-block;
   position: relative;
 }
 
-.blog-card .description .read-more a:after {
+.blog-card .description .read-more button:after {
   font-family: 'Work Sans';
   margin-left: -10px;
   opacity: 0;
@@ -142,7 +144,7 @@
   transition: margin .3s, opacity .3s;
 }
 
-.blog-card .description .read-more a:hover:after {
+.blog-card .description .read-more button:hover:after {
   margin-left: 5px;
   opacity: 1;
 }

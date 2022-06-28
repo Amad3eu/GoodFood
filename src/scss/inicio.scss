@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&display=swap');
 $color_white: #fff;
 $color_dark: #000;
 $color_prime: #5ad67d;
@@ -102,10 +103,11 @@ $yelloDark: #f3d381;
             margin-top: 5px;
         }
         .read-more {
-            font-family: 'Work Sans';
+        font-family: 'Fira Sans Condensed', sans-serif;
             text-align: right;
-            a {
-                color: darkgoldenrod;
+            font-weight: bold;
+            button {
+                color: rgb(20, 20, 20);
                 display: inline-block;
                 position: relative;
                 &:after {

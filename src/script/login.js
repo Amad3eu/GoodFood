@@ -16,13 +16,16 @@ function logar() {
 
     let registro = res.rows[0];
     if (registro["senha"] === senha) {
-      document.querySelector("#missing").innerHTML = "Logado! se divirta";
-      return;
+      document.querySelector("#missing").innerHTML = "Logado! se divirta ✔";
+      setTimeout(function() {
+      window.location.href = "/src/pages/tela_inicio.html" ;
+      }, 5000)
+    } else {
+      document.querySelector("#missing").innerHTML = "Senha incorreta.";
     }
-    document.querySelector("#missing").innerHTML = "Senha incorreta.";
   });
-}
 
+}
 document.querySelector("#logForm").addEventListener("submit", (e) => {
   e.preventDefault();
   logar();

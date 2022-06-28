@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;1,200&display=swap");
 html {
-  background: #f3f3f3;
+  background: #fffded;
   font-family: "Work Sans", sans-serif;
   min-height: 100%;
 }
@@ -35,6 +35,7 @@ button {
 }
 
 .mobile-wrapper {
+  margin-top: 9rem;
   width: 300px;
   margin-bottom: 50px;
   position: absolute;
@@ -92,7 +93,6 @@ button {
 }
 
 .mobile-wrapper .mobile .photo:before {
-  content: "";
   width: 8%;
   padding-bottom: 8%;
   border-radius: 50%;

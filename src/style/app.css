@@ -104,15 +104,14 @@
     }
     
     .guia h4 {
-        margin-left: 10px;
+        margin-left: 15px;
         margin-right: 210px;
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 0.9rem;
         line-height: 20px;
-        border: solid 2px;
-        border-radius: 0.4vh;
+        cursor: pointer;
     }
     
     .sup {

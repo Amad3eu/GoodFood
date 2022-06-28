@@ -8,7 +8,7 @@ $black: #000000;
 $white2: #fffded;
 $yelloDark: #f3d381;
 html {
-  background: #f3f3f3;
+  background: $white2;
   font-family: "Work Sans", sans-serif;
   min-height: 100%;
   &:before {
@@ -41,6 +41,7 @@ button {
 }
 
 .mobile-wrapper {
+  margin-top: 9rem;
   width: 300px;
   margin-bottom: 50px;
   position: absolute;
@@ -79,7 +80,6 @@ button {
         display: block;
       }
       &:before {
-        content: "";
         width: 8%;
         padding-bottom: 8%;
         border-radius: 50%;

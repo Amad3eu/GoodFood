@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/style/darkM.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- icons used in the navigation bar of the phone -->
+  <svg style="display: none;" viewBox="0 0 100 100" width="50" height="50">
+    <!-- perpendicular triangle for the signal icon -->
+    <symbol id="signal" viewBox="0 0 100 100">
+      <path d="M 10 80 h 80 v -60 z" fill="currentColor">
+      </path>
+    </symbol>
+
+    <!-- triangle with a rounded side for the internet icon -->
+    <symbol id="wifi" viewBox="0 0 100 100">
+      <path d="M 50 85 l -40 -60 a 80 80 0 0 1 80 0 z" fill="currentColor">
+      </path>
+    </symbol>
+
+    <!-- rectangle for the battery icon -->
+    <symbol id="battery" viewBox="0 0 100 100">
+      <rect x="10" y="28" width="80" height="44" fill="currentColor">
+      </rect>
+    </symbol>
+  </svg>
+
+
+  <!-- phone UI
+div, wrapping container
+    nav, svg icons
+    svg, large circle showcasing the current theme
+    div, filler text
+    form, with the actual toggle
+    div, filler pagination
+    footer, filler end content
+-->
+
+  <div class="phone">
+    <!-- in the nav show the current time before the three icons created earlier in the svg block -->
+    <nav class="phone--nav">
+      <span>9:42</span> <!-- ! update through the script with the current number of hours:minutes -->
+      <svg width="20" height="20">
+        <use href="#signal"></use>
+      </svg>
+      <svg width="20" height="20">
+        <use href="#wifi"></use>
+      </svg>
+      <svg width="20" height="20">
+        <use href="#battery"></use>
+      </svg>
+    </nav>
+
+
+    <!-- for the svg highlighting the current theme, show a circle -->
+    <svg class="phone--theme" viewBox="0 0 100 100" width="150" height="150">
+      <defs>
+        <!-- gradients for the light and dark themes -->
+        <linearGradient x1="0" x2="1" y1="1" y2="0" id="gradient-light-theme">
+          <stop stop-color="#FF295E" offset="0">
+          </stop>
+          <stop stop-color="#EB811C" offset="1">
+          </stop>
+        </linearGradient>
+        <linearGradient x1="0" x2="1" y1="1" y2="0" id="gradient-dark-theme">
+          <stop stop-color="#826AFF" offset="0">
+          </stop>
+          <stop stop-color="#95C5EF" offset="1">
+          </stop>
+        </linearGradient>
+
+        <!-- mask allowing to crop the circle for the dark theme -->
+        <mask id="mask-theme">
+          <rect x="0" y="0" width="100" height="100" fill="#fff">
+          </rect>
+          <!-- animate the circle to progressively mask the shape to show a sliver of the moon
+                light values
+                cx 100
+                cy 0
+                r 0
+
+                dark values
+                cx 75
+                cy 25
+                r 50
+                -->
+          <circle id="mask-circle" cx="100" cy="0" r="0" fill="#000">
+          </circle>
+        </mask>
+      </defs>
+
+      <!-- include a circle with the predefined gradient and mask -->
+      <circle id="theme-circle" cx="50" cy="50" r="50" mask="url(#mask-theme)" fill="url(#gradient-light-theme)">
+      </circle>
+    </svg>
+
+
+    <div class="phone--brief">
+      <h3>Choose a style</h3>
+      <p>Customize your interface.</p>
+    </div>
+
+    <!-- describe the toggle with a checkbox and a label displaying the actual values -->
+    <form class="phone--toggle">
+      <input type="checkbox" name="checkbox" id="checkbox" />
+      <label for="checkbox">Light Dark</label>
+    </form>
+
+    <!-- describe the hypothetical pagination through three buttons -->
+    <div class="phone--pagination">
+      <button></button>
+      <button></button>
+      <button></button>
+    </div>
+
+    <!-- complete the UI with buttons allowing to continue in the hypothetical setup process -->
+    <div class="phone--footer">
+      <a href="https://imgur.com/ybl1zhv.gif"><button>Skip</button></a>
+      <button onclick=" location.href='/src/pages/app.html'">→</button>
+    </div>
+  </div>
+
+  <script src="/src/script/darkM.js"></script>
+</body>
+
+</html>
