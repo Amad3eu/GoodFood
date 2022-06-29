@@ -19,7 +19,7 @@ function logar() {
       document.querySelector("#missing").innerHTML = "Logado! se divirta ✔";
       setTimeout(function() {
       window.location.href = "/src/pages/tela_inicio.html" ;
-      }, 5000)
+      }, 500)
     } else {
       document.querySelector("#missing").innerHTML = "Senha incorreta.";
     }

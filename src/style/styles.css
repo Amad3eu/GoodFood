@@ -15,8 +15,8 @@ body {
 }
 span{
     font-family: 'Righteous', cursive;
-    font-size: 30pt;
-    color: #FFFEFE;
+    font-size: 20pt;
+    color: #fffefe98;
     text-align: center;
     
 }
@@ -42,7 +42,7 @@ span{
 
 .left-login > h1 {
     font-size: 3vw;
-    color: #F3BF15
+    color: #f3bf15f1
 
 ;
 }
@@ -118,8 +118,8 @@ span{
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 3px;
-    color: #2b134b;
-    background-color: #FFC300 
+    color: #2b134b9c;
+    background-color: #ffc400c9 
 ;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #2E1B06
@@ -135,16 +135,27 @@ span{
 @media only screen and (max-width: 600px) {
     .main-login {
         flex-direction: column;
+        height:fit-content;
     }
     .left-login > h1 {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        font-size: larger;
+    }
+      .left-login > img {
+        display: flex;
+        flex-direction: row;
+        max-width: min-content;
     }
     .left-login {
         width: 100%;
         height: auto;
     }
+    .logo-name{
+        font-size:x-large;
+    }
     .right-login {
-        width: 100%;
+        width: 80%;
         height: auto;
     }
     .left-login-image {
