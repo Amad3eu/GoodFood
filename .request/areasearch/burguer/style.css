@@ -69,7 +69,8 @@ form {
     position: relative;
 }
 
-input, button {
+input,
+button {
     /* reset apperance*/
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -90,7 +91,7 @@ input, button {
 
 }
 
-input ~ label {
+input~label {
     position: absolute;
     top: 16px;
     left: 0;
@@ -100,13 +101,14 @@ input ~ label {
     transition: .4s;
 }
 
-input:focus ~ label,
-input:valid ~ label {
+input:focus~label,
+input:valid~label {
     transform: translateY(-24px);
     font-size: 0.8em;
     letter-spacing: 0.1rem;
-    
+
 }
+
 /* 
 input:-webkit-autofill {
 
@@ -182,7 +184,7 @@ main {
 
 .models-item-img {
     width: 200px;
-    height: 200px;
+    height: 130px;
     background-color: #EEE;
     border-radius: 20px;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.205);
@@ -220,14 +222,19 @@ main {
 
 .models-item-name {
     font-size: 20px;
-    color: black;
+    color: rgba(0, 0, 0, 0.891);
     font-weight: bold;
     margin-top: 5px;
 }
 
 .models-item-desc {
     font-size: 13px;
-    color: #555;
+    color: rgba(85, 85, 85, 0.19);
+    margin-top: 10px;
+}
+.models-item-desc:hover{
+    font-size: 13px;
+    color: rgba(35, 29, 29, 0.725);
     margin-top: 10px;
 }
 
@@ -269,7 +276,7 @@ main {
 }
 
 .modelsBig img {
-    height: 400px;
+    height: 280px;
     width: auto;
 }
 
