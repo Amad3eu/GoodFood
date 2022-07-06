@@ -229,7 +229,7 @@ main {
 
 .models-item-desc {
     font-size: 13px;
-    color: rgba(85, 85, 85, 0.19);
+    color: rgba(85, 85, 85, 0);
     margin-top: 10px;
 }
 .models-item-desc:hover{
