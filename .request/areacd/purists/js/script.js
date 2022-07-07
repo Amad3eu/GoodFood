@@ -152,8 +152,7 @@ c('.cart-finalizar').addEventListener('click', () => {
 
     insertOrder(db, (tx, res) => {
         let id = res.rows[0]["id_pedido"]
-        insertProdsOrder(db, id, cart)
-        location.href = '/src/pages/request.html'
+    insertProdsOrder(db, id, cart, () => location.href = '/src/pages/request.html')
     })
 })
 

@@ -73,13 +73,13 @@ function insertOrder(db, callback) {
 }
 
 // add products to order
-function insertProdsOrder(db, idPedido, cart) {
+function insertProdsOrder(db, idPedido, cart, callback) {
   db.transaction((tx) => {
     for (let i = 0; i < cart.length; i++) {
       const e = cart[i];
       tx.executeSql(
         "INSERT INTO produtos_pedidos (id_pedido, nome_produto, quantidade, tamanho) VALUES (?,?,?,?)",
-        [idPedido, e['nome'], e['qt'], e['size']]
+        [idPedido, e['nome'], e['qt'], e['size']], callback
       )
     }
   })
