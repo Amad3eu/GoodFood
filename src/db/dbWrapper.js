@@ -7,6 +7,11 @@ function getDatabase() {
   );
 }
 
+// note: create table no webSQL ja funciona como
+//       "create table if not exists"
+
+// -======= usuarios ========-
+
 // creates usuarios table
 function createUsuariosTable(db) {
   db.transaction((tx) =>
@@ -35,4 +40,58 @@ function getUsuario(db, email, callback) {
   db.transaction((tx) =>
     tx.executeSql("SELECT * FROM usuarios WHERE email=?", [email], callback)
   );
+}
+
+
+// -=========== Pedidos ===========- //
+
+// create orders table and ordered products table
+function createOrdersTable(db) {
+  db.transaction((tx) => {
+    tx.executeSql(
+      "CREATE TABLE pedidos (id_pedido INTEGER PRIMARY KEY, id_usuario INTEGER NOT NULL)",
+      []
+    ) 
+
+    tx.executeSql(
+      "CREATE TABLE produtos_pedidos (id_prod_pedido INTEGER PRIMARY KEY, id_pedido INTEGER, nome_produto TEXT, quantidade INTEGER, tamanho INTEGER)",
+      []
+    ) 
+  }
+  );
+}
+
+// add order
+function insertOrder(db, callback) {
+  db.transaction((tx) => {
+    tx.executeSql(
+      "INSERT INTO pedidos (id_usuario) VALUES (?) RETURNING id_pedido",
+      [JSON.parse(localStorage.getItem("loggedUser"))["id"]],
+      callback
+    )
+  })
+}
+
+// add products to order
+function insertProdsOrder(db, idPedido, cart) {
+  db.transaction((tx) => {
+    for (let i = 0; i < cart.length; i++) {
+      const e = cart[i];
+      tx.executeSql(
+        "INSERT INTO produtos_pedidos (id_pedido, nome_produto, quantidade, tamanho) VALUES (?,?,?,?)",
+        [idPedido, e['nome'], e['qt'], e['size']]
+      )
+    }
+  })
+}
+
+// search for orders
+function getUserOrders(db, callback) {
+  db.transaction((tx) => {
+    tx.executeSql(
+      "SELECT * FROM pedidos WHERE id_usuario = ?",
+      [JSON.parse(localStorage.getItem('loggedUser'))['id']],
+      callback
+    )
+  })
 }

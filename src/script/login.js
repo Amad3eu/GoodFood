@@ -17,8 +17,13 @@ function logar() {
     let registro = res.rows[0];
     if (registro["senha"] === senha) {
       document.querySelector("#missing").innerHTML = "Logado! se divirta ✔";
+      localStorage.setItem("loggedUser", JSON.stringify({
+        id: registro["id"],
+        nome: registro["nome"],
+        email: registro["email"]
+      }))
       setTimeout(function() {
-      window.location.href = "/src/pages/tela_inicio.html" ;
+        window.location.href = "/src/pages/tela_inicio.html" ;
       }, 500)
     } else {
       document.querySelector("#missing").innerHTML = "Senha incorreta.";

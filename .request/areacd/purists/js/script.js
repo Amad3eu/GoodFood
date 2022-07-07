@@ -8,7 +8,7 @@ const cs = (el) => document.querySelectorAll(el) //para localizar todos os itens
 
 //Vamos mapear nossos dados recebidos via Json
 //Criando a lista de produtos, modelos
-modelsJson.map((item, index)=> {
+modelsJson.map((item, index) => {
     //Vamos pegar a estrutura HTML que tem a class 'models-item', 
     //dentro da class 'models' e clonar - true indica para pegar subitens
     //let modelsItem = document.querySelector('.models .models-item').cloneNode(true);
@@ -35,8 +35,8 @@ modelsJson.map((item, index)=> {
         c('.modelsInfo-desc').innerHTML = modelsJson[key].description
         //c('.modelsInfo-actualPrice').innerHTML = `R$ ${modelsJson[key].price[2].toFixed(2)}`
         c('.modelsInfo-size.selected').classList.remove('selected')
-        cs('.modelsInfo-size').forEach((size, sizeIndex)=> {
-            if(sizeIndex == 2) {
+        cs('.modelsInfo-size').forEach((size, sizeIndex) => {
+            if (sizeIndex == 2) {
                 size.classList.add('selected')
                 c('.modelsInfo-actualPrice').innerHTML = `R$ ${modelsJson[key].price[sizeIndex].toFixed(2)}`
             }
@@ -45,9 +45,9 @@ modelsJson.map((item, index)=> {
         c('.modelsInfo-qt').innerHTML = modalQt
         //Mostrar a janela Modal
         c('.modelsWindowArea').style.opacity = 0    //criando uma animacao
-        c('.modelsWindowArea').style.display = 'flex'  
-        setTimeout(()=> {
-        c('.modelsWindowArea').style.opacity = 1         //mostrando a janela. Sem Timeout, não vemos o efeito
+        c('.modelsWindowArea').style.display = 'flex'
+        setTimeout(() => {
+            c('.modelsWindowArea').style.opacity = 1         //mostrando a janela. Sem Timeout, não vemos o efeito
         }, 200)
     })
 
@@ -59,9 +59,9 @@ modelsJson.map((item, index)=> {
 })
 
 //Acoes do modal - janela
-function closeModal(){
+function closeModal() {
     c('.modelsWindowArea').style.opacity = 0    //criando uma animação
-    setTimeout(()=> {
+    setTimeout(() => {
         c('.modelsWindowArea').style.display = 'none'       //fechando a janela, sem Timeout, não vemos o efeito
     }, 500)
 }
@@ -70,27 +70,27 @@ cs('.modelsInfo-cancelButton, .modelsInfo-cancelMobileButton').forEach((item) =>
     item.addEventListener('click', closeModal)
 })
 
-c('.modelsInfo-qtmenos').addEventListener('click', ()=> {
-    if(modalQt > 1){
+c('.modelsInfo-qtmenos').addEventListener('click', () => {
+    if (modalQt > 1) {
         modalQt--
         c('.modelsInfo-qt').innerHTML = modalQt
     }
 })
 
-c('.modelsInfo-qtmais').addEventListener('click', ()=> {
+c('.modelsInfo-qtmais').addEventListener('click', () => {
     modalQt++
     c('.modelsInfo-qt').innerHTML = modalQt
 })
 
-cs('.modelsInfo-size').forEach((size, sizeIndex)=> {
-    size.addEventListener('click', (e)=> {
+cs('.modelsInfo-size').forEach((size, sizeIndex) => {
+    size.addEventListener('click', (e) => {
         c('.modelsInfo-size.selected').classList.remove('selected')
         size.classList.add('selected')
         c('.modelsInfo-actualPrice').innerHTML = `R$ ${modelsJson[key].price[sizeIndex].toFixed(2)}`
     })
 })
 
-c('.modelsInfo-addButton').addEventListener('click', ()=> {
+c('.modelsInfo-addButton').addEventListener('click', () => {
     //Precisamos saber:
     //Qual o modelo?
     //console.log("Modelo: " + key);
@@ -106,19 +106,19 @@ c('.modelsInfo-addButton').addEventListener('click', ()=> {
     //Isso é o que ocorre atualmente, precisamos de ajustes
     //Antes de adicionar devemos verificar se já existe aquele item com aquele tamanho
     //para isso funcionar vamos criar um identificador
-    let identifier = modelsJson[key].id+'@'+size
+    let identifier = modelsJson[key].id + '@' + size
     //vamos verificar se este identificador já está no carrinho
-    let locaId = cart.findIndex((item)=>item.identifier == identifier)
+    let locaId = cart.findIndex((item) => item.identifier == identifier)
     //se tiver adiciona a quantidade no item já existente, senão acrescento
-    if(locaId > -1){
+    if (locaId > -1) {
         cart[locaId].qt += modalQt
-    }else {
+    } else {
         cart.push({
             identifier,
-            id:modelsJson[key].id,
-            nome:modelsJson[key].name,
+            id: modelsJson[key].id,
+            nome: modelsJson[key].name,
             size,
-            qt:modalQt
+            qt: modalQt
         })
     }
 
@@ -133,7 +133,7 @@ c('.modelsInfo-addButton').addEventListener('click', ()=> {
 //ajustando o mobile
 
 c('.menu-openner').addEventListener('click', () => {
-    if(cart.length > 0){
+    if (cart.length > 0) {
         c('aside').style.left = '0'
     }
 })
@@ -143,67 +143,64 @@ c('.menu-closer').addEventListener('click', () => {
 })
 
 c('.cart-finalizar').addEventListener('click', () => {
-    cart = []
-    // quando clicar no botao FINALIZAR o array do usuario vai esvaziar e vai dar um refresh na pagina
+    // quando clicar no botao FINALIZAR o array do usuario vai esvaziar e vai para a tela de pedidos
     usuario = []
     updateCart()
-    location.reload()
+
+    let db = getDatabase() // para conectar no banco de dados
+    createOrdersTable(db)  // para criar tabelas para pedidos
+
+    insertOrder(db, (tx, res) => {
+        let id = res.rows[0]["id_pedido"]
+        insertProdsOrder(db, id, cart)
+        location.href = '/src/pages/request.html'
+    })
 })
 
 function updateCart() {
     c('.menu-openner span').innerHTML = cart.length
-    if(cart.length > 0) {
-        c('aside').classList.add('show')
-        c('.cart').innerHTML = ''         //limpo o carinho - visual
-        //Fechando valores
-        let subtotal = 0
-        let desconto = 0
-        let total = 0
-        cart.map((itemCart, index) => {
-            let modelItem =  modelsJson.find((itemBD)=> itemBD.id == itemCart.id)
-            subtotal += modelItem.price[itemCart.size] * itemCart.qt
-            let cartItem = c('.models .cart-item').cloneNode(true)
-            let modelSizeName
-            //Alternativa
-            switch(itemCart.size){
-                case 0:
-                    modelSizeName = 'P'
-                    break
-                case 1:
-                    modelSizeName = 'M'
-                    break
-                case 2:
-                    modelSizeName = 'G'
-                    break
-            }
-            cartItem.querySelector('img').src = modelItem.img
-            //cartItem.querySelector('.cart-item-nome').innerHTML = `${modelItem.name} (${modelSizeName})`
-            cartItem.querySelector('.cart-item-nome').innerHTML = `${modelItem.name} (${modelItem.sizes[itemCart.size]})`
-            cartItem.querySelector('.cart-item-qt').innerHTML = itemCart.qt
-            cartItem.querySelector('.cart-item-qtmenos').addEventListener('click', () => {
-                if (itemCart.qt > 1) {
-                    itemCart.qt--
-                }else {
-                    cart.splice(index, 1)
-                }
-                updateCart()
-            })
-            cartItem.querySelector('.cart-item-qtmais').addEventListener('click', () => {
-                itemCart.qt++
-                updateCart()
-            })
 
-            c('.cart').append(cartItem)
-        })
-        desconto = subtotal * 0.1
-        total = subtotal - desconto
-        c('.subtotal span:last-child').innerHTML = `R$ ${subtotal.toFixed(2)}`
-        c('.desconto span:last-child').innerHTML = `R$ ${desconto.toFixed(2)}`
-        c('.total span:last-child').innerHTML = `R$ ${total.toFixed(2)}`
-    } else {
+    if (cart.length === 0) {
         c('aside').classList.remove('show')
         c('aside').style.left = '100vw'
+        return
     }
+
+    c('aside').classList.add('show')
+    c('.cart').innerHTML = ''         //limpo o carinho - visual
+    //Fechando valores
+    let subtotal = 0
+    let desconto = 0
+    let total = 0
+    cart.map((itemCart, index) => {
+        let modelItem = modelsJson.find((itemBD) => itemBD.id == itemCart.id)
+        subtotal += modelItem.price[itemCart.size] * itemCart.qt
+        let cartItem = c('.models .cart-item').cloneNode(true)
+
+        cartItem.querySelector('img').src = modelItem.img
+        //cartItem.querySelector('.cart-item-nome').innerHTML = `${modelItem.name} (${modelSizeName})`
+        cartItem.querySelector('.cart-item-nome').innerHTML = `${modelItem.name} (${modelItem.sizes[itemCart.size]})`
+        cartItem.querySelector('.cart-item-qt').innerHTML = itemCart.qt
+        cartItem.querySelector('.cart-item-qtmenos').addEventListener('click', () => {
+            if (itemCart.qt > 1) {
+                itemCart.qt--
+            } else {
+                cart.splice(index, 1)
+            }
+            updateCart()
+        })
+        cartItem.querySelector('.cart-item-qtmais').addEventListener('click', () => {
+            itemCart.qt++
+            updateCart()
+        })
+
+        c('.cart').append(cartItem)
+    })
+    desconto = subtotal * 0.1
+    total = subtotal - desconto
+    c('.subtotal span:last-child').innerHTML = `R$ ${subtotal.toFixed(2)}`
+    c('.desconto span:last-child').innerHTML = `R$ ${desconto.toFixed(2)}`
+    c('.total span:last-child').innerHTML = `R$ ${total.toFixed(2)}`
 }
 
 c('.login').addEventListener('click', () => {
