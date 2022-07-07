@@ -1,17 +1,11 @@
 
 <p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
 <p align="center">
  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=ED2590&labelColor=5292C1" alt="License">
-  
-  <img src="https://img.shields.io/github/forks/birobirobiro/hubkut?label=forks&message=MIT&color=ED2590&labelColor=5292C1" alt="Forks">
-
-  <img src="https://img.shields.io/github/stars/birobirobiro/hubkut?label=stars&message=MIT&color=ED2590&labelColor=5292C1 " alt="Stars">
-</p>
+  </p>
 
 ## 🚀 Tecnologias
 
@@ -24,10 +18,6 @@
 ## 🚧 Projeto
 
 Live Preview: <https://goodfoodi.vercel.app/>
-
-## 🎨 Layout
-
-Figma: <https://www.figma.com/community/file/1105860543512658494>
 
 ## :memo: Licença
 
